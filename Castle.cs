@@ -19,7 +19,7 @@ namespace WizardGrenade
         public void LoadContent(ContentManager contentManager)
         {
             LoadContent(contentManager, _fileName);
-            Position = new Vector2((WizardGrenadeGame.SCREEN_WIDTH / 2) - Size.Width / 2, WizardGrenadeGame.SCREEN_HEIGHT - Size.Height);
+            Position = new Vector2((WizardTargetGame.SCREEN_WIDTH / 2) - Size.Width / 2, WizardTargetGame.SCREEN_HEIGHT - Size.Height);
 
         }
 

@@ -10,7 +10,7 @@ namespace WizardGrenade
         [STAThread]
         static void Main()
         {
-            using (var game = new WizardGrenadeGame())
+            using (var game = new WizardTargetGame())
                 game.Run();
         }
     }

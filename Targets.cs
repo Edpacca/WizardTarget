@@ -34,7 +34,7 @@ namespace WizardGrenade
 
         public Vector2 NewTargetPosition()
         {
-            return new Vector2(positionGenerator.Next(10, WizardGrenadeGame.SCREEN_WIDTH), positionGenerator.Next(10, WizardGrenadeGame.SCREEN_HEIGHT));
+            return new Vector2(positionGenerator.Next(10, WizardTargetGame.SCREEN_WIDTH), positionGenerator.Next(10, WizardTargetGame.SCREEN_HEIGHT));
         }
         
         public bool UpdateTargetCollisions(Sprite SpriteA)
@@ -62,10 +62,10 @@ namespace WizardGrenade
                     target.Position.X = 0;
                 if (target.Position.Y < 0)
                     target.Position.Y = 0;
-                if (target.Position.X > WizardGrenadeGame.SCREEN_WIDTH)
-                    target.Position.X = WizardGrenadeGame.SCREEN_WIDTH;
-                if (target.Position.Y > WizardGrenadeGame.SCREEN_HEIGHT - 100)
-                    target.Position.Y = WizardGrenadeGame.SCREEN_HEIGHT - 100;
+                if (target.Position.X > WizardTargetGame.SCREEN_WIDTH)
+                    target.Position.X = WizardTargetGame.SCREEN_WIDTH;
+                if (target.Position.Y > WizardTargetGame.SCREEN_HEIGHT - 100)
+                    target.Position.Y = WizardTargetGame.SCREEN_HEIGHT - 100;
             }
 
             //positionResetTimer += (int)gameTime.ElapsedGameTime.TotalMilliseconds;

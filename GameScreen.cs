@@ -30,7 +30,7 @@ namespace WizardGrenade
 
         public void Initialize()
         {
-            player = new Player(WizardGrenadeGame.SCREEN_WIDTH / 2, 348);
+            player = new Player(WizardTargetGame.SCREEN_WIDTH / 2, 348);
             castle = new Castle();
         }
 
@@ -108,10 +108,10 @@ namespace WizardGrenade
             player.Draw(spriteBatch);
             castle.Draw(spriteBatch);
 
-            spriteBatch.DrawString(_playerStatFont, "Score: " + Score, new Vector2(WizardGrenadeGame.SCREEN_WIDTH - 140, WizardGrenadeGame.SCREEN_HEIGHT - 80), Color.Turquoise);
+            spriteBatch.DrawString(_playerStatFont, "Score: " + Score, new Vector2(WizardTargetGame.SCREEN_WIDTH - 140, WizardTargetGame.SCREEN_HEIGHT - 80), Color.Turquoise);
 
             if (_gameOver)
-                spriteBatch.DrawString(_playerStatFont, "FINAL SCORE: " + Score, new Vector2(WizardGrenadeGame.SCREEN_WIDTH / 2 - 120, WizardGrenadeGame.SCREEN_HEIGHT / 2), Color.HotPink);
+                spriteBatch.DrawString(_playerStatFont, "FINAL SCORE: " + Score, new Vector2(WizardTargetGame.SCREEN_WIDTH / 2 - 120, WizardTargetGame.SCREEN_HEIGHT / 2), Color.HotPink);
             else
                 _rounds.DrawTimer(spriteBatch);
 

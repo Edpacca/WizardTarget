@@ -75,12 +75,12 @@ namespace WizardGrenade
 
         public void DrawTimer(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(_timerFont, "Round " + CurrentRound, new Vector2(WizardGrenadeGame.SCREEN_WIDTH / 2 - 60, 10), Color.Turquoise);
+            spriteBatch.DrawString(_timerFont, "Round " + CurrentRound, new Vector2(WizardTargetGame.SCREEN_WIDTH / 2 - 60, 10), Color.Turquoise);
             
             if (roundActive)
-                spriteBatch.DrawString(_timerFont, ((int)(_roundLength - roundTimer)).ToString(), new Vector2(WizardGrenadeGame.SCREEN_WIDTH / 2 - 30, 40), Color.Yellow);
+                spriteBatch.DrawString(_timerFont, ((int)(_roundLength - roundTimer)).ToString(), new Vector2(WizardTargetGame.SCREEN_WIDTH / 2 - 30, 40), Color.Yellow);
             else
-                spriteBatch.DrawString(_timerFont, ((int)(_countDownLength - countDown + 1)).ToString() + "!", new Vector2(WizardGrenadeGame.SCREEN_WIDTH / 2 - 30, 40), Color.Red);
+                spriteBatch.DrawString(_timerFont, ((int)(_countDownLength - countDown + 1)).ToString() + "!", new Vector2(WizardTargetGame.SCREEN_WIDTH / 2 - 30, 40), Color.Red);
 
         }
     }

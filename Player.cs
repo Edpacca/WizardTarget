@@ -108,7 +108,7 @@ namespace WizardGrenade
             if (currentKeyboardState.IsKeyDown(Keys.Space) && _grenadePower < 500)
                 _grenadePower += (float)gameTime.ElapsedGameTime.TotalSeconds * POWER_COEFFICIENT;
 
-            if (WizardGrenadeGame.KeysReleased(currentKeyboardState, previousKeyboardState, Keys.Space))
+            if (WizardTargetGame.KeysReleased(currentKeyboardState, previousKeyboardState, Keys.Space))
             {
                 ThrowGrenade(_grenadePower, gameTime);
                 _grenadePower = 0;
@@ -156,7 +156,7 @@ namespace WizardGrenade
                 grenade.Draw(spriteBatch);
             }
 
-            spriteBatch.DrawString(_playerStatFont, "power: " + (int)_grenadePower, new Vector2(WizardGrenadeGame.SCREEN_WIDTH - 140, WizardGrenadeGame.SCREEN_HEIGHT - 50), Color.Yellow);
+            spriteBatch.DrawString(_playerStatFont, "power: " + (int)_grenadePower, new Vector2(WizardTargetGame.SCREEN_WIDTH - 140, WizardTargetGame.SCREEN_HEIGHT - 50), Color.Yellow);
         }
 
     }
