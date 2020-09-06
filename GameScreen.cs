@@ -18,7 +18,7 @@ namespace WizardGrenade
         const int NumberOfTargets = 5;
         private RoundTimer _rounds;
         private int _numberOfRounds = 3;
-        private float _roundLength = 36;
+        private float _roundLength = 16;
         private float _countDownLength = 3;
         private bool _gameOver = false;
         private bool _allTargetsDead = false;
@@ -93,10 +93,13 @@ namespace WizardGrenade
 
             foreach (var grenade in player._grenades)
             {
-                if (_targets.UpdateTargetCollisions(grenade))
+                if (_rounds.roundActive)
                 {
-                    Score += (int)_rounds.TimeScoreMultiplier() * 5;
-                    player.GrenadeCollisionResolution(grenade, gameTime);
+                    if (_targets.UpdateTargetCollisions(grenade))
+                    {
+                        Score += (int)_rounds.TimeScoreMultiplier() * 5;
+                        player.GrenadeCollisionResolution(grenade, gameTime);
+                    }
                 }
             }
 

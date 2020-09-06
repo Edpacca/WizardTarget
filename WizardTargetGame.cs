@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace WizardGrenade
 {
-    public class WizardGrenadeGame : Game
+    public class WizardTargetGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
@@ -23,7 +23,7 @@ namespace WizardGrenade
 
         private Matrix Scale;
 
-        public WizardGrenadeGame()
+        public WizardTargetGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
